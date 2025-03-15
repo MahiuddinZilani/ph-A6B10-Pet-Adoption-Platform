@@ -1,3 +1,4 @@
+// display category
 const displayCategories = (categories) => {
   const categoriesContainer = document.querySelector("#categories-container");
 
@@ -28,11 +29,54 @@ const displayCategories = (categories) => {
   });
 };
 
+// display pets cards
 const displayCards = (pets) => {
-  console.log(pets.length);
-  //   pets.forEach((each) => {
-  //     console.log(each.pet_name);
-  //   });
+  //   console.log(pets.length);
+  const petsContainer = document.querySelector("#pets-container");
+  petsContainer.innerHTML = "";
+
+  //   if()
+
+  pets.forEach((each) => {
+    const {
+      petId,
+      breed,
+      category,
+      date_of_birth,
+      price,
+      image,
+      gender,
+      pet_details,
+      vaccinated_status,
+      pet_name,
+    } = each;
+
+    const card = document.createElement("div");
+    card.classList.add("card", "bg-base-100", "shadow-sm");
+    card.innerHTML = `<figure class="px-10 pt-10">
+        <img
+            src="${image}"
+            alt=${pet_name}
+            class="rounded-xl"
+        />
+      </figure>
+      
+      <div class="card-body">
+        <h1 class="card-title">${pet_name}</h1>
+        <h2 class="">Breed: ${breed}</h2>
+        <h2 class="">Birth: ${date_of_birth}</h2>
+        <h2 class="">Gender: ${gender}</h2>
+        <h2 class="">Price: ${price}</h2>
+        <hr />
+        <div class="flex justify-evenly gap-1">
+            <button class="bg-slate-50 rounded-lg px-4 py-2">like</button>
+            <button class="bg-slate-50 rounded-lg px-4 py-2">Adopt</button>
+            <button class="bg-slate-50 rounded-lg px-4 py-2">Details</button>
+        </div>
+      </div>`;
+
+    petsContainer.append(card);
+  });
 };
 
 const displaySinglePet = (id) => {
