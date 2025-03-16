@@ -47,7 +47,6 @@ const displayCards = (pets) => {
       "flex",
       "justify-center",
       "items-center",
-      "border",
       "mx-auto"
     );
 

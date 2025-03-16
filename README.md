@@ -46,4 +46,4 @@ The **Pet Adoption Platform** is a web application designed to help users browse
   const interval = setInterval(() => { ... }, 1000);
   ```
 
-  **Links**: `[👉 Pet Adoption Platform](https://mahiuddinzilani.github.io/ph-A6B10-Pet-Adoption-Platform/)` .
+  **Links**: `[(`👉`) Pet Adoption Platform](https://mahiuddinzilani.github.io/ph-A6B10-Pet-Adoption-Platform/)` .
