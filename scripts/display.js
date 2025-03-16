@@ -32,8 +32,10 @@ const displayCategories = (categories) => {
 // display pets cards
 const displayCards = (pets) => {
   //   console.log(pets.length);
+
   const petsContainer = document.querySelector("#pets-container");
   petsContainer.innerHTML = "";
+  petsContainer.classList.add("lg:grid", "lg:grid-cols-3", "gap-4");
 
   if (pets.length === 0) {
     petsContainer.classList.remove("lg:grid-cols-3");

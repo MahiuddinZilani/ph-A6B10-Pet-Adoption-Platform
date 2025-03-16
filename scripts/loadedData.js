@@ -19,11 +19,18 @@ const loadAllPets = () => {
 };
 
 const loadSingleCategory = (category) => {
-  //   console.log(category);
+  const petsContainer = document.querySelector("#pets-container");
+  petsContainer.classList.remove("lg:grid", "lg:grid-cols-3", "gap-4");
+  petsContainer.innerHTML = `
+    <div class="w-full flex justify-center items-center">
+        <span class="loading loading-spinner loading-xl w-48"></span>
+    </div>`;
   changeCategoryBg(category);
-  fetch(`https://openapi.programming-hero.com/api/peddy/category/${category}`)
-    .then((response) => response.json())
-    .then((data) => displayCards(data?.data));
+  setTimeout(() => {
+    fetch(`https://openapi.programming-hero.com/api/peddy/category/${category}`)
+      .then((response) => response.json())
+      .then((data) => displayCards(data?.data));
+  }, 2000);
 };
 
 const loadSinglePet = async (petId) => {
