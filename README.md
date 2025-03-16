@@ -20,10 +20,28 @@ The **Pet Adoption Platform** is a web application designed to help users browse
 
 - **Arrow Functions**: Used for concise function syntax.
 
-  ````javascript
-  ```const adopted = () => { ... };
+  ```javascript
+  const adopted = () => { ... };
 
-  ````
+  ```
 
 - **Template Literals**: Used for dynamic string interpolation.
-  ```card.innerHTML = `<h1>${petData.pet_name}</h1>`;
+  ```html
+  card.innerHTML =
+  <h1>${petData.pet_name}</h1>
+  ;
+  ```
+- **Fetch API with Async/Await**: Used for asynchronous data fetching.
+  ```javascript
+    const loadSinglePet = async (petId) => { ... };
+  ```
+- **Destructuring**: Used to extract properties from objects.
+
+  ```const { petId, pet_name, breed } = each;
+
+  ```
+
+- **let and const:** Used for block-scoped variable declarations.
+  ```let countDown = 5;
+  const interval = setInterval(() => { ... }, 1000);
+  ```
