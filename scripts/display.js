@@ -73,20 +73,24 @@ const displayCards = (pets) => {
 
       const card = document.createElement("div");
       card.classList.add("card", "bg-base-100", "shadow-sm");
-      card.innerHTML = `<figure class="px-10 pt-10">
+      card.innerHTML = `<figure class="px-4 pt-4">
                     <img
                         src="${image}"
                         alt=${pet_name}
-                        class="rounded-xl"
+                        class="rounded-xl w-full h-44 object-fill"
                     />
                   </figure>
                   
-                  <div class="card-body">
-                    <h1 class="card-title">${pet_name}</h1>
-                    <h2 class="">Breed: ${breed}</h2>
-                    <h2 class="">Birth: ${date_of_birth}</h2>
-                    <h2 class="">Gender: ${gender}</h2>
-                    <h2 class="">Price: ${price}</h2>
+                  <div class="card-body text-sm">
+                    <h1 class="card-title">${pet_name ? pet_name : "N/A"}</h1>
+                    <div>
+                        <h2 class="">Breed: ${breed ? breed : "N/A"}</h2>
+                        <h2 class="">Birth: ${
+                          date_of_birth ? date_of_birth : "N/A"
+                        }</h2>
+                        <h2 class="">Gender: ${gender ? gender : "N/A"}</h2>
+                        <h2 class="">Price: ${price ? price : "N/A"}</h2>
+                    </div>
                     <hr />
                     <div class="flex justify-evenly gap-1">
                         <button class="btn bg-slate-50 rounded-lg px-4 py-2" onclick='liked("${image}")'>Like</button>

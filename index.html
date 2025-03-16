@@ -18,75 +18,66 @@
   <body>
     <header>
       <!-- navbar  -->
-      <div class="navbar bg-base-100 shadow-sm">
-        <div class="navbar-start">
-          <div class="dropdown">
-            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+      <div class="bg-base-100 shadow-sm">
+        <div class="max-w-7xl mx-auto py-2 navbar">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
+                <li><a>Home</a></li>
+                <li><a>Shop</a></li>
+                <li><a>Contact</a></li>
+              </ul>
             </div>
-            <ul
-              tabindex="0"
-              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
-            >
-              <li><a>Item 1</a></li>
-              <li>
-                <a>Parent</a>
-                <ul class="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
-              </li>
-              <li><a>Item 3</a></li>
+            <a class="btn btn-ghost text-xl">
+              <img src="./images/logo.webp" alt="" />
+              <h2>Peddy</h2>
+            </a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a>Home</a></li>
+              <li><a>Shop</a></li>
+              <li><a>Contact</a></li>
             </ul>
           </div>
-          <a class="btn btn-ghost text-xl">daisyUI</a>
-        </div>
-        <div class="navbar-center hidden lg:flex">
-          <ul class="menu menu-horizontal px-1">
-            <li><a>Item 1</a></li>
-            <li>
-              <details>
-                <summary>Parent</summary>
-                <ul class="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
-              </details>
-            </li>
-            <li><a>Item 3</a></li>
-          </ul>
-        </div>
-        <div class="navbar-end">
-          <a class="btn">Button</a>
+          <div class="navbar-end">
+            <img src="./images/avatar.png" alt="" class="w-10 h-10" />
+          </div>
         </div>
       </div>
 
       <!-- hero section  -->
-      <div class="hero bg-base-200 min-h-screen">
+      <div class="hero bg-base-50">
         <div class="hero-content text-center">
           <div class="max-w-3xl">
             <h6 class="text-sm font-semibold">Bringing Families Together</h6>
-            <h1 class="text-5xl font-bold">
+            <h1 class="pt-4 text-lg lg:text-5xl font-bold">
               Your Path to Adoption <br />
               Starts Here
             </h1>
-            <p class="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
+            <p class="py-4 text-sm">
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout. The
+              point of using Lorem Ipsum is that it has a.
             </p>
             <button class="btn btn-primary">View More</button>
             <img src="./images/pet.webp" alt="" />
@@ -95,14 +86,18 @@
       </div>
     </header>
 
-    <main class="">
-      <h2>Adopt Your Best Friend</h2>
-      <p>
-        It is a long established fact that a reader will be distracted by the
-        readable content of a page when looking at its layout. The point of
-        using Lorem Ipsum is that it has a.
-      </p>
-      <section>
+    <main class="max-w-7xl mx-auto my-6 bg-white">
+      <section class="text-center">
+        <h2 class="py-4 text-lg lg:text-5xl font-bold">
+          Adopt Your Best Friend
+        </h2>
+        <p class="py-4 text-sm">
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum is that it has a.
+        </p>
+      </section>
+      <section class="mt-4">
         <!-- category  -->
         <div
           id="categories-container"
@@ -110,26 +105,71 @@
         ></div>
 
         <!-- sort by price  -->
-        <div>
+        <div class="flex justify-between mx-4 py-4">
           <label for="sort-by-price">Best Deal for You</label>
           <button class="btn" id="sortByPrice">Sort By Price</button>
         </div>
 
         <!-- cards  -->
-        <div class="lg:flex">
+        <div class="lg:flex gap-4">
           <!-- loaded pets in card  -->
-
-          <div id="pets-container" class="flex w-3/4 mx-auto border"></div>
+          <div
+            id="pets-container"
+            class="flex flex-col w-1/2 lg:w-3/4 mx-auto"
+          ></div>
 
           <!-- liked pets  -->
-          <div class="w-1/4">
-            <div id="liked-pet-container" class="lg:grid lg:grid-cols-2"></div>
+          <div class="w-3/4 mx-auto lg:w-1/4">
+            <div id="liked-pet-container" class="grid grid-cols-2 gap-4"></div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer></footer>
+    <footer
+      class="footer md:footer-horizontal bg-neutral text-neutral-content p-10"
+    >
+      <nav>
+        <div class="flex justify-center items-center gap-4">
+          <img src="./images/logo.webp" alt="" class="w-12" />
+          <h2 class="text-2xl font-bold">Peddy</h2>
+        </div>
+        <div>
+          <h4>Location: av. Washington 165, NY CA 54003</h4>
+          <h4>Phone: +31 85 964 47 25</h4>
+          <h4>Email: info@yourdomain.com</h4>
+          <h4>Openings hours: 9.00 AM - 5.00 PM</h4>
+        </div>
+        <div class="flex justify-center items-center gap-4">
+          <img src="./images/fb.png" alt="" class="w-10 h-10" />
+          <img src="./images/x.png" alt="" class="bg-white w-10 h-10" />
+          <img src="./images/youtube.png" alt="" class="w-10 h-10" />
+          <img src="./images/insta.png" alt="" class="w-10 h-10" />
+        </div>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Useful Links</h6>
+        <a class="link link-hover">Home</a>
+        <a class="link link-hover">About Us</a>
+        <a class="link link-hover">Animals</a>
+        <a class="link link-hover">Foundation</a>
+        <a class="link link-hover">Contact</a>
+      </nav>
+
+      <form>
+        <h6 class="footer-title">Drop a Message</h6>
+        <fieldset class="w-80">
+          <div class="flex flex-col gap-4">
+            <input
+              type="text"
+              placeholder="username@site.com"
+              class="input input-bordered join-item text-black"
+            />
+            <button class="btn btn-primary join-item">Subscribe</button>
+          </div>
+        </fieldset>
+      </form>
+    </footer>
 
     <dialog id="adopted_modal" class="modal modal-bottom sm:modal-middle">
       <div class="modal-box text-center">

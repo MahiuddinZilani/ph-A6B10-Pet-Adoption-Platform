@@ -17,6 +17,7 @@ const liked = (petImage) => {
   const likedPetsContainer = document.querySelector("#liked-pet-container");
   const likedPet = document.createElement("img");
   likedPet.src = petImage;
+  likedPet.classList.add("bg-base-100", "p-2", "rounded-xl", "shadow-sm");
   likedPetsContainer.append(likedPet);
   //   console.log(petImage);
 };
