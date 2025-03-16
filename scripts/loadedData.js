@@ -19,7 +19,8 @@ const loadAllPets = () => {
 };
 
 const loadSingleCategory = (category) => {
-  console.log(category);
+  //   console.log(category);
+  changeCategoryBg(category);
   fetch(`https://openapi.programming-hero.com/api/peddy/category/${category}`)
     .then((response) => response.json())
     .then((data) => displayCards(data?.data));
