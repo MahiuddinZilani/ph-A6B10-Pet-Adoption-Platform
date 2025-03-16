@@ -99,10 +99,7 @@ const displayCards = (pets) => {
 };
 
 const adopted = (string) => {
-  my_modal_5.showModal();
-};
-const details = (petId) => {
-  console.log(petId, "fetch this");
+  adopted_modal.showModal();
 };
 
 const displaySinglePet = (id) => {

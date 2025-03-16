@@ -26,5 +26,17 @@ const loadSingleCategory = (category) => {
     .then((data) => displayCards(data?.data));
 };
 
+const loadSinglePet = async (petId) => {
+  try {
+    const response = await fetch(
+      `https://openapi.programming-hero.com/api/peddy/pet/${petId}`
+    );
+    const data = await response.json();
+    return data?.petData;
+  } catch (err) {
+    console.error(err);
+  }
+};
+
 loadCategories();
 loadAllPets();
