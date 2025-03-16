@@ -11,8 +11,12 @@ const changeCategoryBg = (category) => {
       eachCategory.classList.remove("bg-red-100", "rounded-full");
     }
   }
+};
 
-  //   console.log(totalCategories.length, count);
-
-  //   console.log(categoriesContainer.childNodes[0].lastChild.innerText);
+const liked = (petImage) => {
+  const likedPetsContainer = document.querySelector("#liked-pet-container");
+  const likedPet = document.createElement("img");
+  likedPet.src = petImage;
+  likedPetsContainer.append(likedPet);
+  //   console.log(petImage);
 };

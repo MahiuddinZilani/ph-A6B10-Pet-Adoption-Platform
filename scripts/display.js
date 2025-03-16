@@ -98,11 +98,8 @@ const displayCards = (pets) => {
   }
 };
 
-const liked = (petImage) => {
-  console.log(petImage);
-};
 const adopted = (string) => {
-  console.log(string);
+  my_modal_5.showModal();
 };
 const details = (petId) => {
   console.log(petId, "fetch this");
