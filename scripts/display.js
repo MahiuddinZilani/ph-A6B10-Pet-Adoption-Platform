@@ -89,9 +89,9 @@ const displayCards = (pets) => {
                     <h2 class="">Price: ${price}</h2>
                     <hr />
                     <div class="flex justify-evenly gap-1">
-                        <button class="bg-slate-50 rounded-lg px-4 py-2" onclick='liked("${image}")'>Like</button>
-                        <button class="bg-slate-50 rounded-lg px-4 py-2" onclick="adopted('show congrats!')">Adopt</button>
-                        <button class="bg-slate-50 rounded-lg px-4 py-2" onclick="details(${petId})">Details</button>
+                        <button class="btn bg-slate-50 rounded-lg px-4 py-2" onclick='liked("${image}")'>Like</button>
+                        <button class="btn bg-slate-50 rounded-lg px-4 py-2" onclick="adopted(${petId})" id="adopt-${petId}">Adopt</button>
+                        <button class="btn bg-slate-50 rounded-lg px-4 py-2" onclick="details(${petId})">Details</button>
                     </div>
                   </div>`;
 
@@ -103,10 +103,6 @@ const displayCards = (pets) => {
     pets.sort((a, b) => b.price - a.price);
     displayCards(pets);
   });
-};
-
-const adopted = (string) => {
-  adopted_modal.showModal();
 };
 
 const displaySinglePet = (id) => {

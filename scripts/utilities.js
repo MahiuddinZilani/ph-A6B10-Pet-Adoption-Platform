@@ -1,7 +1,3 @@
-const sortByPrice = () => {
-  console.log("will be sorted");
-};
-
 const changeCategoryBg = (category) => {
   //   console.log(category);
   let count = 0;
@@ -23,6 +19,27 @@ const liked = (petImage) => {
   likedPet.src = petImage;
   likedPetsContainer.append(likedPet);
   //   console.log(petImage);
+};
+
+const adopted = (petId) => {
+  const buttonId = "adopt-" + petId;
+  const button = document.getElementById(buttonId);
+  button.disabled = true;
+
+  adopted_modal.showModal();
+  let countDown = 3;
+
+  const interval = setInterval(() => {
+    if (countDown <= 1) {
+      clearInterval(interval);
+      adopted_modal.close();
+    }
+    document.querySelector("#count-down").textContent = countDown;
+    countDown--;
+  }, 1000);
+
+  //   countDown = 3;
+  document.querySelector("#count-down").textContent = "3";
 };
 
 // show details
