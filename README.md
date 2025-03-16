@@ -26,10 +26,8 @@ The **Pet Adoption Platform** is a web application designed to help users browse
   ```
 
 - **Template Literals**: Used for dynamic string interpolation.
-  ```html
-  card.innerHTML =
-  <h1>${petData.pet_name}</h1>
-  ;
+  ```javascript
+  card.innerHTML = <h1>${petData.pet_name}</h1>;
   ```
 - **Fetch API with Async/Await**: Used for asynchronous data fetching.
   ```javascript
@@ -37,11 +35,15 @@ The **Pet Adoption Platform** is a web application designed to help users browse
   ```
 - **Destructuring**: Used to extract properties from objects.
 
-  ```const { petId, pet_name, breed } = each;
-
+  ```javascript
+  const { petId, pet_name, breed } = each;
   ```
 
 - **let and const:** Used for block-scoped variable declarations.
-  ```let countDown = 5;
+
+  ```javascript
+  let countDown = 5;
   const interval = setInterval(() => { ... }, 1000);
   ```
+
+  **Links**: `[👉 Pet Adoption Platform]([url](https://mahiuddinzilani.github.io/ph-A6B10-Pet-Adoption-Platform/))` .
