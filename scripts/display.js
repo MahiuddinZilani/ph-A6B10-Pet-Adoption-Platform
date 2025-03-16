@@ -43,7 +43,7 @@ const displayCards = (pets) => {
 
     noPets.classList.add(
       "w-full",
-      "h-[600px]",
+      "h-[500px]",
       "flex",
       "justify-center",
       "items-center",
@@ -98,6 +98,11 @@ const displayCards = (pets) => {
       petsContainer.append(card);
     });
   }
+
+  document.getElementById("sortByPrice").addEventListener("click", () => {
+    pets.sort((a, b) => b.price - a.price);
+    displayCards(pets);
+  });
 };
 
 const adopted = (string) => {

@@ -1,3 +1,7 @@
+const sortByPrice = () => {
+  console.log("will be sorted");
+};
+
 const changeCategoryBg = (category) => {
   //   console.log(category);
   let count = 0;
